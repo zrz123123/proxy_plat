@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proxy - 工作首页</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link href="css/timeline-style.css" rel="stylesheet">
+<!-- link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"-->
+<link rel="stylesheet" type="text/css" href="css/jquery.eeyellow.Timeline.css" />
+
+<script>
+function showdiv(){
+if(document.getElementById('div1').style.display!='none'){
+document.getElementById('div2').style.display='';
+document.getElementById('div1').style.display='none';
+}else{
+document.getElementById('div1').style.display='';
+document.getElementById('div2').style.display='none';
+}
+}
+</script>
+
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				
+				<i class="navbar-brand"><span><span  class="fa" id="sidebar-toggle-fa">&#xf233  </span> Proxy</span>Admin </i>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li>
+			<form role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+			</form>
+			</li>
+		</ul>
+		<ul class="nav menu">
+			<li class="active"><a href="index.html"><span class="glyphicon glyphicon-dashboard"></span> 工作首页</a></li>
+			<li><a href="widgets.html"><span class="glyphicon glyphicon-th"></span> 创建请求</a></li>
+			<li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span> 资源监控</a></li>
+			<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> 告警页面</a></li>
+			<li class="parent ">
+				<a href="#">
+					<span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 1
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 2
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 3
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>
+		</ul>
+		<div class="attribution">&copy All Rights Reserved</div>
+	</div><!--/.sidebar-->
+		
+	<div  id="main-content" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">工作首页</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Dashboard</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget ">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-tasks glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">120</div>
+							<div class="text-muted">已   完   成</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--div id="switch" onclick="showdiv()">点击显示</div-->
+			<div id= "div1" class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-blue panel-widget ">
+				<!-- div class="bg-success" -->
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-folder-open glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">24</div>
+							<div class="text-muted">处    理    中</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="div2" class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-red panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-envelope glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">25</div>
+							<div class="text-muted">待   处   理</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-orange panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-bullhorn glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">52</div>
+							<div class="text-muted">消   息</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body tabs">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab">处   理   中</a></li>
+							<li><a href="#tab2" data-toggle="tab">已   完   成</a></li>
+							<li><a href="#tab3" data-toggle="tab">未  读  消  息</a></li>
+						</ul>
+		
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="tab1">
+								<h4>需求一</h4>
+								<div class="VivaTimeline">
+						<dl>
+	                        <dt class="start">START</dt>                                    
+	                        <dd class="pos-left clearfix">
+	                            <div class="circ"></div>
+	                            <div class="time">Feb 03</div>
+	                            <div class="events">
+	                                <div class="events-header">应用运维</div>                                
+	                                <div class="events-body">                                                                                            
+	                                    <div class="row">
+	                                    	<div class="events-desc">
+	                                        	123
+	                                        </div>
+	                                    </div>      
+	                                    <div class="row">
+	                                    	<div class="events-desc">
+	                                        	456
+	                                        </div>
+	                                    </div>  
+	                                    <div class="row">
+	                                    	<div class="events-desc">
+	                                        	789
+	                                        </div>
+	                                    </div>                                    
+	                                </div>   
+	                                                              
+	                            </div>
+	                        </dd>
+	                        <dd class="pos-right clearfix">
+	                            <div class="circ"></div>
+	                            <div class="time">Jan 21</div>
+	                            <div class="events">
+	                                <div class="events-header">中间件组</div>                                
+	                                <div class="events-body">                                                                                            
+	                                    <div class="row">
+	                                    	<div class="events-desc">
+	                                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                                        </div>
+	                                    </div>
+	                                    
+	                                </div>       
+	                                <div class="events-footer">
+	                                	
+	                                </div>                                                       
+	                            </div>
+	                        </dd>   
+	                        <dd class="pos-left clearfix">
+	                            <div class="circ"></div>
+	                            <div class="time">Jan 07</div>
+	                            <div class="events">
+	                                <div class="events-header">网络实施</div>                                
+	                                <div class="events-body">                                                                                            
+	                                    <div class="row">
+	                                    	<div class="events-desc">
+	                                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                                        </div>
+	                                    </div>
+	                                </div>                                
+	                            </div>
+	                        </dd>                                    
+	                        <dt>END</dt>                        
+	                        
+	                    </dl>
+					</div>
+							</div>
+							<div class="tab-pane fade" id="tab2">
+								<div class="row">
+			<div class="col-lg-12">
+				<h2>Alerts</h2>
+				<div class="alert bg-primary" role="alert">
+					<span class="glyphicon glyphicon-info-sign"></span> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+				<div class="alert bg-success" role="alert">
+					<span class="glyphicon glyphicon-check"></span> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+				<div class="alert bg-warning" role="alert">
+					<span class="glyphicon glyphicon-warning-sign"></span> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+				<div class="alert bg-danger" role="alert">
+					<span class="glyphicon glyphicon-exclamation-sign"></span> Welcome to the admin dashboard panel bootstrap template <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+			</div>
+		</div>
+							</div>
+							<div class="tab-pane fade" id="tab3">
+								<h4>Tab 3</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+	
+	</div>	<!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- script src="js/chart.min.js"></script -->
+	<script src="js/index.js"></script>
+	<!-- script src="js/chart-data.js"></script-->
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/jquery.eeyellow.Timeline.js"></script>
+	<script>
+		
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+		
+			</script>	
+</body>
+
+</html>

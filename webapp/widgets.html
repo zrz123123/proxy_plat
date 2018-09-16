@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proxy - 创建请求</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link rel="stylesheet" href="css/widgets.css">
+<link rel="stylesheet" href="css/ystep.css">
+
+<script>
+function showdiv(){
+if(document.getElementById('div1').style.display!='none'){
+document.getElementById('div2').style.display='';
+document.getElementById('div1').style.display='none';
+}else{
+document.getElementById('div1').style.display='';
+document.getElementById('div2').style.display='none';
+}
+}
+</script>
+
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				
+				<i class="navbar-brand"><span><span  class="fa" id="sidebar-toggle-fa">&#xf233  </span> Proxy</span>Admin </i>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li>
+			<form role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+			</form>
+			</li>
+		</ul>
+		<ul class="nav menu">
+			<li><a href="index.html"><span class="glyphicon glyphicon-dashboard"></span> 工作首页</a></li>
+			<li class="active"><a href="widgets.html"><span class="glyphicon glyphicon-th"></span> 创建请求</a></li>
+			<li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span> 资源监控</a></li>
+			<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> 告警页面</a></li>
+			<li class="parent ">
+				<a href="#">
+					<span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 1
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 2
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 3
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>
+		</ul>
+		<div class="attribution">&copy All Rights Reserved</div>
+	</div><!--/.sidebar-->
+		
+	<div  id="main-content" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">创建请求</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Requests</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body tabs">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab">入访请求</a></li>
+							<li><a href="#tab2" data-toggle="tab">出访请求</a></li>
+						</ul>
+		
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="tab1">
+								<h4>申请进度</h4>
+								<p>
+									<div class="process0"></div>
+								</p>
+							</div>
+							<div class="tab-pane fade" id="tab2">
+								<h4>申请进度</h4>
+								<p>
+									<div class="process1"></div>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+								
+	</div>	<!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/ystep.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script>
+		$('#calendar').datepicker({
+		});
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+		
+		// process0
+		$(".process0").loadStep({
+      size: "large",
+      color: "blue",
+      steps: [{
+        title: "应用",
+        content: "发起申请"
+      },{
+        title: "审核",
+        content: "架构审批"
+      },{
+        title: "中间件",
+        content: "代理配置"
+      },{
+        title: "网络",
+        content: "网络关系实现"
+      }]
+    });
+		
+		// process1
+		$(".process1").loadStep({
+      size: "large",
+      color: "blue",
+      steps: [{
+        title: "应用",
+        content: "发起申请"
+      },{
+        title: "审核",
+        content: "架构审批"
+      },{
+        title: "中间件",
+        content: "代理配置"
+      },{
+        title: "网络",
+        content: "网络关系实现"
+      }]
+    });
+      $(".process0").setStep(3);
+      $(".process1").setStep(1);
+	</script>	
+</body>
+
+</html>
